@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html manifest="cache.mff">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+        <script type="text/javascript" src="js/calc.js" ></script>
+        <script type="text/javascript" src="js/database.js" ></script>
+        <script type="text/javascript">
+            window.addEventListener ('load', function (e) {
+
+                window.applicationCache.update ();
+                window.applicationCache.addEventListener ('updateready', function (e) {
+                    if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+                        window.applicationCache.swapCache ();
+                        if (confirm ('A new version of calc is available. Load it?'))
+                            window.location.reload ();
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div id="calc" style="font-family: courier">
+            <div id="calc-display"></div>
+
+            <div id="calc-indicators">
+                <span id="calc-indicators-memory">M</span>
+                <span id="calc-indicators-operation">+</span>
+            </div>
+
+            <div id="calc-controls">
+                <div class="row btn4">
+                    <button id="calc-memoryPlus">M+</button>
+                    <button id="calc-memoryMinus">M-</button>
+                    <button id="calc-memoryUse">M</button>
+                    <button id="calc-clearEverything">CE</button>
+                </div>
+
+                <div class="row btn4">
+                    <button id="calc-7">7</button>
+                    <button id="calc-8">8</button>
+                    <button id="calc-9">9</button>
+                    <button id="calc-divide">/</button>
+                </div>
+
+                <div class="row btn4">
+                    <button id="calc-4">4</button>
+                    <button id="calc-5">5</button>
+                    <button id="calc-6">6</button>
+                    <button id="calc-multiply">*</button>
+                </div>
+
+                <div class="row btn4">
+                    <button id="calc-1">1</button>
+                    <button id="calc-2">2</button>
+                    <button id="calc-3">3</button>
+                    <button id="calc-minus">-</button>
+                </div>
+
+                <div class="row btn4">
+                    <button id="calc-0">0</button>
+                    <button id="calc-comma">,</button>
+                    <button id="calc-equals">=</button>
+                    <button id="calc-plus">+</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

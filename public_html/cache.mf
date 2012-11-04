@@ -1,0 +1,7 @@
+CACHE MANIFEST 
+# 2012-10-25:v1
+
+http://karel.bubileg.cz/hans/paa/PAA_calc/index.html
+http://karel.bubileg.cz/hans/paa/PAA_calc/js/calc.js
+http://karel.bubileg.cz/hans/paa/PAA_calc/js/database.js
+http://karel.bubileg.cz/hans/paa/PAA_calc/css/main.css
